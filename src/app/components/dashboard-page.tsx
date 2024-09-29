@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "./ui/card";
 import { BellRing, CreditCard, Plus, Search, Video } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { Input } from "../components/ui/input";
 import { Button } from "./ui/button";
 // type Props = {};
 
