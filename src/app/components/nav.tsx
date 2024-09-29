@@ -6,6 +6,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@radix-ui/react-popover";
+import { signOut } from "next-auth/react";
 
 const Nav = () => {
   return (
@@ -29,7 +30,10 @@ const Nav = () => {
               <User className="w-4 h-4 mr-2" />
               Profile
             </li>
-            <li className="flex items-center p-2 cursor-pointer hover:bg-gray-100">
+            <li
+              className="flex items-center p-2 cursor-pointer hover:bg-gray-100"
+              onClick={() => signOut()}
+            >
               <LogOut className="w-4 h-4 mr-2" />
               Sign out
             </li>

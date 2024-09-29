@@ -49,7 +49,7 @@ const DashboardPage = () => {
               <Plus className="mr-2" size={15} /> Add Space
             </Button>
           </div>
-          <div className="my-5 grid grid-cols-3">
+          <div className="my-5 grid md:grid-cols-3 xs:grid-cols-1">
             <div className="relative">
               <Input
                 placeholder="Search testimonials by name"
