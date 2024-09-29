@@ -1,8 +1,8 @@
 "use client";
 
-import DashboardPage from "@/components/dashboard-page";
-import WelcomePage from "@/components/welcome-page";
 import { useSession } from "next-auth/react";
+import WelcomePage from "./components/welcome-page";
+import DashboardPage from "./components/dashboard-page";
 // import { Session } from "next-auth";
 
 export default function ProtectedPage() {
