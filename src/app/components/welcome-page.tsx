@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { signIn } from "next-auth/react";
-import { Button } from "./ui/button";
+
 // type Props = {};
 
 const strArr = [
@@ -14,11 +13,6 @@ const strArr = [
 const WelcomePage = () => {
   return (
     <div className="p-5">
-      <div className="float-end">
-        <Button variant={"outline"} className="" onClick={() => signIn()}>
-          Sign In
-        </Button>
-      </div>
       <div className="h-[90vh] relative flex items-center justify-center ">
         <div className="ml-5 text-center absolute ">
           <h1 className="text-5xl font-bold mb-8">
