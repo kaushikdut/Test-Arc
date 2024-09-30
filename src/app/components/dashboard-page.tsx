@@ -3,6 +3,8 @@ import { Card } from "./ui/card";
 import { BellRing, CreditCard, Plus, Search, Video } from "lucide-react";
 import { Input } from "../components/ui/input";
 import { Button } from "./ui/button";
+import Image from "next/image";
+import Link from "next/link";
 // type Props = {};
 
 const DashboardPage = () => {
@@ -65,33 +67,29 @@ const DashboardPage = () => {
           </div>
 
           <div className="grid xs:grid-cols-1 md:grid-cols-3  gap-2 ">
-            <Card className="rounded">
-              <div className=" flex items-center space-x-4 rounded-md pt-8  p-4">
-                <Video />
-                <div className="space-y-1">
-                  <p className="text-sm font-semibold leading-none">Videos</p>
-                  <p className="text-sm text-muted-foreground">2</p>
+            <Link href={"/products/1"}>
+              <Card className="rounded">
+                <div className=" flex items-center space-x-4 rounded-md pt-8  p-4">
+                  <Image
+                    src="https://cdn.pixabay.com/photo/2015/01/06/16/14/woman-590490_1280.jpg"
+                    height={50}
+                    width={50}
+                    alt="space_logo"
+                  />
+                  <div className="space-y-1">
+                    <p className="text-sm font-semibold leading-none">
+                      Test Space
+                    </p>
+                    <div className="flex ">
+                      <p className="text-sm text-muted-foreground">Video: 2</p>
+                      <p className="text-sm text-muted-foreground ml-5">
+                        Text: 2
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </Card>
-            <Card className="rounded">
-              <div className=" flex items-center space-x-4 rounded-md pt-8  p-4">
-                <Video />
-                <div className="space-y-1">
-                  <p className="text-sm font-semibold leading-none">Videos</p>
-                  <p className="text-sm text-muted-foreground">2</p>
-                </div>
-              </div>
-            </Card>
-            <Card className="rounded">
-              <div className=" flex items-center space-x-4 rounded-md pt-8  p-4">
-                <Video />
-                <div className="space-y-1">
-                  <p className="text-sm font-semibold leading-none">Videos</p>
-                  <p className="text-sm text-muted-foreground">2</p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </Link>
           </div>
         </div>
       </div>

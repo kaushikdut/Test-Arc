@@ -1,10 +1,10 @@
-import Nav from "@/app/components/nav";
+// import Nav from "@/app/components/nav";
 import React from "react";
 
 const Testimonials = () => {
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       Testimonials
     </div>
   );
