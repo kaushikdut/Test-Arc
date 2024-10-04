@@ -13,7 +13,7 @@ const Nav = () => {
   const { data: session } = useSession();
   console.log(session);
   return (
-    <div className="p-3 flex justify-between items-center">
+    <div className="p-3 flex justify-between items-center bg-slate-200">
       <h1 className="text-xl font-semibold">TestArc</h1>
       <div>
         {!session ? (

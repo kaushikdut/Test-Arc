@@ -9,7 +9,11 @@ export default function ProtectedPage() {
   const { status } = useSession();
 
   if (status === "loading") {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center items-center w-[100vh] h-[100vh]">
+        <div>Loading...</div>
+      </div>
+    );
   }
 
   if (status === "unauthenticated") {
