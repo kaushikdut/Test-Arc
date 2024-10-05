@@ -2,7 +2,6 @@ import React from "react";
 // import { Button } from "@/app/components/ui/button";
 import Image from "next/image";
 import { Circle } from "lucide-react";
-import CreateTeamImg from "@/public/creative_dream.svg";
 
 const MainContent = () => {
   const [activeMenu, setActiveMenu] = React.useState("Inbox");
@@ -46,7 +45,7 @@ const MainContent = () => {
         <Image
           width={600}
           height={700}
-          src={CreateTeamImg}
+          src={"/creative_dream.svg"}
           alt="Placeholder"
           className="rounded-md"
         />
