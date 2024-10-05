@@ -14,6 +14,7 @@ const WorkSpace = ({ isVisible }: WorkspaceProps) => {
         >
           X
         </button>
+        {/* Tabs*/}
         <Tabs defaultValue="basic" className=" w-full h-full">
           <TabsList>
             <TabsTrigger value="basic">Basic</TabsTrigger>
