@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useForm, FormProvider } from "react-hook-form";
-import FormComponentInput from "./form-component-input";
-import FormComponentTextarea from "./form-component-textarea";
-import FormComponentInputImage from "./form-component-input-image";
+import FormComponentInput from "../../../../../components/form-inputs/form-component-input";
+import FormComponentTextarea from "../../../../../components/form-inputs/form-component-textarea";
+import FormComponentInputImage from "../../../../../components/form-inputs/form-component-input-image";
 import useImageStore from "@/store/store";
 
 const Basic = () => {

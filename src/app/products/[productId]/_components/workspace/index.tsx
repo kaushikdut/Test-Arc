@@ -1,9 +1,9 @@
 "use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Basic from "./_components/basic-component";
+import Basic from "./tabs/basic-tab";
 import { Heart, Settings, SlidersHorizontal } from "lucide-react";
-import Thankyou from "./_components/thankyou-component";
-import ExtraSettings from "./_components/extraSettings-component";
+import Thankyou from "./tabs/thankyou-tab";
+import ExtraSettings from "./tabs/extra-settings-tab";
 import { useState } from "react";
 
 interface WorkspaceProps {

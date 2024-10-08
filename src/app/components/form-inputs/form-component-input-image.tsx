@@ -1,16 +1,16 @@
 import { Input } from "@/app/components/ui/input";
 import {
   FormControl,
-  FormDescription,
+  // FormDescription,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  // FormMessage,
 } from "@/components/ui/form";
 import { UseFormReturn } from "react-hook-form";
 import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import useImageStore from "@/store/store";
+// import useImageStore from "@/store/store";
 
 interface FormComponentInputProps {
   label: string;

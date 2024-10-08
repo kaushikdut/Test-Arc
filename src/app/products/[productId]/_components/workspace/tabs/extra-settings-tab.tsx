@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { useForm, FormProvider } from "react-hook-form";
-import FormComponentInput from "./form-component-input";
+import FormComponentInput from "../../../../../components/form-inputs/form-component-input";
 import useImageStore from "@/store/store";
 import { ArrowLeft } from "lucide-react";
-
-const Notification = () => {
+interface ExtraSettingsProps {
+  handleGoBack: () => void;
+}
+const ExtraSettings = ({ handleGoBack }: ExtraSettingsProps) => {
   const form = useForm();
   const watchHeader = form.watch("header", "");
   const watchMessage = form.watch("message", "");
@@ -20,7 +22,7 @@ const Notification = () => {
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <div className="w-full h-full mt-5 flex-col flex md:flex-row gap-4 text-neutral-600 ">
           <div className="w-full h-fit md:w-[40%]">
-            <Button variant={"ghost"} type="button" onClick={() => {}}>
+            <Button variant={"ghost"} type="button" onClick={handleGoBack}>
               <ArrowLeft className="w-4 h-4 mr-1" /> Go back
             </Button>
             <div className="w-full flex flex-col items-center p-8 gap-y-4 border rounded-xl">
@@ -46,7 +48,7 @@ const Notification = () => {
           <div className="flex-grow flex items-center justify-center p-6">
             <div className="w-full flex flex-col gap-y-6">
               <h2 className="text-center text-4xl font-bold text-neutral-800">
-                Notification
+                Some extra settings
               </h2>
               {/* Video button Field */}
               <FormComponentInput
@@ -91,4 +93,4 @@ const Notification = () => {
   );
 };
 
-export default Notification;
+export default ExtraSettings;
