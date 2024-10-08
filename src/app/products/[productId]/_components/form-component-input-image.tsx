@@ -19,15 +19,25 @@ interface FormComponentInputProps {
   formDescription?: string;
   form: UseFormReturn;
   type?: string;
+  image: string | null;
+  setImage: (url: string) => void;
 }
 
-const FormComponentInput = ({ form, label, name }: FormComponentInputProps) => {
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
+const FormComponentInput = ({
+  form,
+  label,
+  name,
+  image,
+  setImage,
+}: FormComponentInputProps) => {
+  const [imagePreview, setImagePreview] = useState<string | null>(
+    image || null
+  );
   const fileInputRef = useRef<HTMLInputElement | null>(null);
-  const setImage = useImageStore((state) => state.setImage);
+
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) {
+    if (file && setImage) {
       const objectUrl = URL.createObjectURL(file);
       setImagePreview(objectUrl);
       form.setValue(name, file);
@@ -76,7 +86,7 @@ const FormComponentInput = ({ form, label, name }: FormComponentInputProps) => {
                 className="rounded-[5px] border"
                 variant={"default"}
               >
-                Upload image
+                Change
               </Button>
             </div>
           </FormItem>

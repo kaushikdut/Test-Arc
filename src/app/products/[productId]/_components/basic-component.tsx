@@ -9,7 +9,9 @@ const Basic = () => {
   const form = useForm();
   const watchHeader = form.watch("header", "");
   const watchMessage = form.watch("message", "");
+  const watchRecord = form.watch("video", "");
   const image = useImageStore((state) => state.image);
+  const setImage = useImageStore((state) => state.setImage);
 
   const onSubmit = (data: any) => {
     console.log(data);
@@ -18,7 +20,7 @@ const Basic = () => {
   return (
     <FormProvider {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="w-full h-full mt-5 flex-col flex md:flex-row gap-4 px-3 text-neutral-600 ">
+        <div className="w-full h-full mt-5 flex-col flex md:flex-row gap-4 text-neutral-600 ">
           <div className="w-full h-fit md:w-[40%] flex flex-col items-center p-8 gap-y-4 border rounded-xl">
             {image ? (
               <img src={image} className="w-[100px]" alt="logo" />
@@ -35,12 +37,12 @@ const Basic = () => {
               type="button"
               className="w-full bg-blue-800/80 text-white p-3 hover:bg-blue-800/90 rounded-[5px]"
             >
-              Record video
+              {watchRecord || "Record a video"}
             </Button>
           </div>
           <div className="flex-grow flex items-center justify-center p-6">
             <div className="w-full flex flex-col gap-y-6">
-              <h2 className="text-center text-4xl font-bold text-black">
+              <h2 className="text-center text-4xl font-bold text-neutral-800">
                 Edit Space
               </h2>
               {/* Space Name Field */}
@@ -58,6 +60,8 @@ const Basic = () => {
                 placeholder="Spacename"
                 formDescription="Public URL is:..."
                 form={form}
+                image={image}
+                setImage={setImage}
               />
 
               {/* Header Field */}
