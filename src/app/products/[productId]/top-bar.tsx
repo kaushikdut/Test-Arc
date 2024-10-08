@@ -7,7 +7,11 @@ const info = [
   { icon: <VideoIcon size={20} />, title: "Video", credits: "02" },
   { icon: <MessageSquare size={20} />, title: "Text", credits: "10" },
 ];
-const TopBar = () => {
+
+interface TopbarProps {
+  handleClick: () => void;
+}
+const TopBar = ({ handleClick }: TopbarProps) => {
   return (
     <div className="flex justify-between items-center bg-slate-200 p-3">
       {/* Left Side */}
@@ -37,7 +41,7 @@ const TopBar = () => {
               <p className="ml-6">{ele.credits}</p>
             </div>
           ))}
-          <Button className="rounded" variant={"outline"}>
+          <Button className="rounded" variant={"outline"} onClick={handleClick}>
             {" "}
             <Pencil size={15} className="mr-4" /> Edit
           </Button>

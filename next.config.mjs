@@ -5,6 +5,7 @@ const nextConfig = {
       "cdn.pixabay.com",
       "lh3.googleusercontent.com",
       "via.placeholder.com",
+      "avatars.githubusercontent.com",
     ], // Add the allowed domain here
   },
 };
