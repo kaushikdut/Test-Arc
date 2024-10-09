@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { useForm, FormProvider } from "react-hook-form";
+import { useForm, FormProvider, FieldValue } from "react-hook-form";
 import FormComponentInput from "@/app/components/form-inputs/form-component-input";
 import FormComponentTextarea from "@/app/components/form-inputs/form-component-textarea";
 import FormComponentInputImage from "@/app/components/form-inputs/form-component-input-image";
@@ -9,6 +9,7 @@ import { ArrowLeft } from "lucide-react";
 interface ThankyouProps {
   handleGoBack: () => void;
 }
+
 const Thankyou = ({ handleGoBack }: ThankyouProps) => {
   const form = useForm();
   const watchHeader = form.watch("header", "");
@@ -16,7 +17,7 @@ const Thankyou = ({ handleGoBack }: ThankyouProps) => {
   const thankyouImage = useImageStore((state) => state.thankyouImage);
   const setThankyouImage = useImageStore((state) => state.setThankyouImage);
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     console.log(data);
   };
 

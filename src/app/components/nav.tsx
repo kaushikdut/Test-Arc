@@ -8,13 +8,19 @@ import {
 } from "@radix-ui/react-popover";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
+import Logo from "./logo";
 
 const Nav = () => {
   const { data: session } = useSession();
-  console.log(session);
   return (
-    <div className="p-3 flex justify-between items-center bg-slate-200">
-      <h1 className="text-xl font-semibold">TestArc</h1>
+    <div
+      className={cn(
+        "p-3 flex justify-between items-center bg-white",
+        session && "bg-slate-200"
+      )}
+    >
+      <Logo />
       <div>
         {!session ? (
           <Button variant={"outline"} className="" onClick={() => signIn()}>

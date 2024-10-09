@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useForm, FormProvider } from "react-hook-form";
-import FormComponentInput from "../../../components/form-inputs/form-component-input";
 import useImageStore from "@/store/store";
 import { ArrowLeft } from "lucide-react";
+import FormComponentInput from "@/app/components/form-inputs/form-component-input";
 
 const Notification = () => {
   const form = useForm();
